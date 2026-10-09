@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'">
+<title>Pack Installer</title><link rel="stylesheet" href="style.css"></head><body>
+<header id="bar"><b>Pack Installer</b><span>GTA V · FiveM graphics packs</span>
+  <nav><button id="history">History</button><button id="uninstall">Uninstall</button><button id="verify">Verify</button>
+  <button id="min" class="icon">–</button><button id="close" class="icon">×</button></nav></header>
+<main>
+  <section><h2><i>1</i>Graphics pack</h2>
+    <div class="row"><input id="pack" readonly placeholder="Select a folder or ZIP file"><button id="pickFolder">Folder</button><button id="pickZip">ZIP</button></div></section>
+  <div class="two">
+    <section><h2><i>2</i>FiveM directory</h2><div class="row"><input id="fivem"><button id="bFivem">Browse</button></div><small id="fivemTag"></small></section>
+    <section><h2><i>3</i>GTA V directory</h2><div class="row"><input id="gta"><button id="bGta">Browse</button></div><small id="gtaTag"></small></section>
+  </div>
+  <section><h2><i>4</i>Detected components</h2><ul id="comps"><li class="muted">Select a pack above and its components appear here.</li></ul>
+    <div class="right"><button id="redetect" disabled>Re-detect</button><button id="preview" disabled>Preview install</button></div></section>
+  <section class="between"><h2><i>5</i>Options</h2>
+    <label class="sw"><input type="checkbox" id="backup" checked><span></span>Back up existing files</label>
+    <div class="seg" id="policy"><em>If files exist</em><button data-p="ask" class="on">Ask</button><button data-p="overwrite">Overwrite all</button><button data-p="skip">Skip all</button></div></section>
+  <section><h2><i>6</i>ReShade setup</h2>
+    <p>After installing ReShade for FiveM, open FiveM to the main menu, then close it. The installer reads the latest log and adds the ReShade line to <code>CitizenFX.ini</code>.</p>
+    <div class="row"><button id="reshade">Configure ReShade</button><small id="rsMsg"></small></div></section>
+</main>
+<footer><div id="status"></div><button id="install" disabled>Install graphics pack</button><div id="prog"><div></div></div></footer>
+<div id="modal" hidden><div><h3>Install history</h3><ul id="hist"></ul><button id="mclose">Close</button></div></div>
+<script src="app.js"></script></body></html>

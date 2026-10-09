@@ -1,0 +1,10 @@
+{
+  "name": "pack-installer",
+  "version": "1.0.0",
+  "description": "GTA V / FiveM graphics pack installer",
+  "main": "main.js",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win" },
+  "dependencies": { "adm-zip": "^0.5.16" },
+  "devDependencies": { "electron": "^33.0.0", "electron-builder": "^25.0.0" },
+  "build": { "appId": "local.packinstaller", "productName": "Pack Installer", "win": { "target": "nsis" }, "files": ["main.js", "preload.js", "renderer/**"] }
+}
